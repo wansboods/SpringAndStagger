@@ -16,12 +16,12 @@ import javax.servlet.http.HttpServletRequest;
 /**
  * Created by haoyifen on 16-9-28 2016 下午5:47
  */
-@Api(value = "User控制器")
+@Api(value = "User控制器", tags = {"20用户"}, hidden=false )
 @Controller
 @RequestMapping("/user")
 public class UserController {
 
-    @ApiOperation(value = "根据用户id查询用户信息", httpMethod = "GET", produces = "application/json")
+    @ApiOperation(value = "根据用户id查询用户信息", notes = "用户查询333", httpMethod = "GET", produces = "application/json")
     @ApiResponse(code = 200, message = "success", response = Result.class)
     @ResponseBody
     @RequestMapping(value = "queryUserById", method = RequestMethod.GET, produces = "application/json")
